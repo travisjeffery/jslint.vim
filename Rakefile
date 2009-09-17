@@ -33,20 +33,12 @@ task :install do
              else
                File.expand_path("~/.vim")
              end
-<<<<<<< HEAD
   files.each do |file|
     target_file = File.join(vimfiles, file)
     FileUtils.mkdir_p File.dirname(target_file)
     FileUtils.cp file, target_file
 
     puts "Installed #{file} to #{target_file}"
-=======
-  target_dir = File.join(vimfiles, 'plugin', 'jslint')
-  FileUtils.mkdir_p target_dir
-  files.each do |file|
-    FileUtils.cp file, target_dir
-    puts "Installed #{file} to #{target_dir}/"
->>>>>>> 8bc0814058436e213d5f8ed60754129db317abf5
   end
 
 end
